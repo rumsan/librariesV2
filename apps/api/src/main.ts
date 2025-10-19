@@ -32,10 +32,10 @@ async function bootstrap() {
   );
   
   const config = new DocumentBuilder()
-    .setTitle('Rahat Triggers')
-    .setDescription('The Rahat Triggers API description')
+    .setTitle('Rumsan Seed')
+    .setDescription('Rumsan Seed using NestJS, Prisma, and Swagger')
     .setVersion('1.0')
-    .addTag('Triggers')
+    .addTag('Rumsan')
     .build();
 
   const documentFactory = () => SwaggerModule.createDocument(app, config);
