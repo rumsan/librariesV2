@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2022",
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@rumsan/user/*": ["./src/*"],
+      "@rumsan/sdk/*": ["../rumsan-sdk/dist/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+}

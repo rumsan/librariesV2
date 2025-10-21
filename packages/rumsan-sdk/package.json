@@ -1,0 +1,111 @@
+{
+  "name": "@rumsan/sdk",
+  "version": "0.2.21",
+  "description": "Rumsan SDK for interfacing with Rumsan applications",
+  "keywords": [
+    "rumsan",
+    "sdk",
+    "client",
+    "api",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Rumsan",
+  "license": "MIT",
+  "homepage": "https://github.com/rumsan/libraries/tree/main/packages/rumsan-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/rumsan/libraries/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rumsan/libraries.git",
+    "directory": "packages/rumsan-sdk"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch src",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "latest"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./clients": {
+      "types": "./dist/clients/index.d.ts",
+      "import": "./dist/clients/index.js",
+      "require": "./dist/clients/index.js"
+    },
+    "./clients/*": {
+      "types": "./dist/clients/*.d.ts",
+      "import": "./dist/clients/*.js",
+      "require": "./dist/clients/*.js"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.js",
+      "require": "./dist/constants/index.js"
+    },
+    "./constants/*": {
+      "types": "./dist/constants/*.d.ts",
+      "import": "./dist/constants/*.js",
+      "require": "./dist/constants/*.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js"
+    },
+    "./types/*": {
+      "types": "./dist/types/*.d.ts",
+      "import": "./dist/types/*.js",
+      "require": "./dist/types/*.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js"
+    },
+    "./utils/*": {
+      "types": "./dist/utils/*.d.ts",
+      "import": "./dist/utils/*.js",
+      "require": "./dist/utils/*.js"
+    },
+    "./utils/nodejs": {
+      "types": "./dist/utils/nodejs/index.d.ts",
+      "import": "./dist/utils/nodejs/index.js",
+      "require": "./dist/utils/nodejs/index.js"
+    },
+    "./utils/nodejs/*": {
+      "types": "./dist/utils/nodejs/*.d.ts",
+      "import": "./dist/utils/nodejs/*.js",
+      "require": "./dist/utils/nodejs/*.js"
+    }
+  },
+  "peerDependencies": {
+    "axios": "^1.7.9"
+  },
+  "peerDependenciesMeta": {
+    "typestub-ipfs-only-hash": {
+      "optional": true
+    }
+  }
+}

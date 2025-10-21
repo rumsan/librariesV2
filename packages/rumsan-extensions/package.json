@@ -1,0 +1,132 @@
+{
+  "name": "@rumsan/extensions",
+  "version": "0.2.21",
+  "description": "Rumsan NestJS for enhancing Rumsan nestjs applications",
+  "author": "Rumsan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rumsan/raman.git",
+    "directory": "packages/rumsan-user"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch src",
+    "clean": "rm -rf dist node_modules",
+    "lint": "echo \"Skipping lint for now\" && exit 0",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/swagger": "^11.0.3",
+    "@rumsan/prisma": "workspace:*",
+    "@rumsan/sdk": "workspace:*",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "http-status-codes": "^2.3.0",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "latest"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.js",
+      "require": "./dist/constants/index.js"
+    },
+    "./constants/*": {
+      "types": "./dist/constants/*.d.ts",
+      "import": "./dist/constants/*.js",
+      "require": "./dist/constants/*.js"
+    },
+    "./decorators": {
+      "types": "./dist/decorators/index.d.ts",
+      "import": "./dist/decorators/index.js",
+      "require": "./dist/decorators/index.js"
+    },
+    "./decorators/*": {
+      "types": "./dist/decorators/*.d.ts",
+      "import": "./dist/decorators/*.js",
+      "require": "./dist/decorators/*.js"
+    },
+    "./dtos": {
+      "types": "./dist/dtos/index.d.ts",
+      "import": "./dist/dtos/index.js",
+      "require": "./dist/dtos/index.js"
+    },
+    "./dtos/*": {
+      "types": "./dist/dtos/*.d.ts",
+      "import": "./dist/dtos/*.js",
+      "require": "./dist/dtos/*.js"
+    },
+    "./exceptions": {
+      "types": "./dist/exceptions/index.d.ts",
+      "import": "./dist/exceptions/index.js",
+      "require": "./dist/exceptions/index.js"
+    },
+    "./exceptions/*": {
+      "types": "./dist/exceptions/*.d.ts",
+      "import": "./dist/exceptions/*.js",
+      "require": "./dist/exceptions/*.js"
+    },
+    "./interceptors": {
+      "types": "./dist/interceptors/index.d.ts",
+      "import": "./dist/interceptors/index.js",
+      "require": "./dist/interceptors/index.js"
+    },
+    "./interceptors/*": {
+      "types": "./dist/interceptors/*.d.ts",
+      "import": "./dist/interceptors/*.js",
+      "require": "./dist/interceptors/*.js"
+    },
+    "./settings": {
+      "types": "./dist/settings/index.d.ts",
+      "import": "./dist/settings/index.js",
+      "require": "./dist/settings/index.js"
+    },
+    "./settings/*": {
+      "types": "./dist/settings/*.d.ts",
+      "import": "./dist/settings/*.js",
+      "require": "./dist/settings/*.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js"
+    },
+    "./types/*": {
+      "types": "./dist/types/*.d.ts",
+      "import": "./dist/types/*.js",
+      "require": "./dist/types/*.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js"
+    },
+    "./utils/*": {
+      "types": "./dist/utils/*.d.ts",
+      "import": "./dist/utils/*.js",
+      "require": "./dist/utils/*.js"
+    }
+  }
+}

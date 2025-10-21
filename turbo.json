@@ -8,6 +8,18 @@
       "outputs": [".next/**", "!.next/cache/**", "dist/**"],
       "env": ["DATABASE_URL"]
     },
+     "build:pkg": {
+      "dependsOn": ["@rumsan/sdk#build", "@rumsan/ui#build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"],
+      "cache": false
+    },
+    "@rumsan/ui#build:pkg": {
+      "dependsOn": ["@rumsan/shadcn#build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"],
+      "cache": false
+    },
     "lint": {
       "dependsOn": ["^lint"]
     },

@@ -1,0 +1,135 @@
+{
+  "name": "@rumsan/user",
+  "version": "0.2.21",
+  "description": "Rumsan User for managing user and authentication",
+  "author": "Rumsan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rumsan/raman.git",
+    "directory": "packages/rumsan-user"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch src",
+    "clean": "rm -rf dist node_modules",
+    "lint": "echo \"Skipping lint for now\" && exit 0",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "devDependencies": {
+    "@nestjs/event-emitter": "^3.0.0",
+    "@nestjs/testing": "^11.0.1",
+    "jest": "^29.7.0",
+    "passport-jwt": "^4.0.1",
+    "tsup": "^8.5.0",
+    "typescript": "latest",
+    "viem": "^2.30.0"
+  },
+  "peerDependencies": {
+    "@casl/ability": "^6.7.3",
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.1",
+    "@nestjs/event-emitter": "^3.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/swagger": "^11.0.3",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@rumsan/extensions": "workspace:*",
+    "@rumsan/prisma": "workspace:*",
+    "axios": "^1.7.9",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "passport-jwt": "^4.0.1",
+    "viem": "^2.30.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./ability": {
+      "types": "./dist/ability/index.d.ts",
+      "import": "./dist/ability/index.js",
+      "require": "./dist/ability/index.js"
+    },
+    "./ability/*": {
+      "types": "./dist/ability/*.d.ts",
+      "import": "./dist/ability/*.js",
+      "require": "./dist/ability/*.js"
+    },
+    "./auth": {
+      "types": "./dist/auth/index.d.ts",
+      "import": "./dist/auth/index.js",
+      "require": "./dist/auth/index.js"
+    },
+    "./auth/*": {
+      "types": "./dist/auth/*.d.ts",
+      "import": "./dist/auth/*.js",
+      "require": "./dist/auth/*.js"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.js",
+      "require": "./dist/constants/index.js"
+    },
+    "./constants/*": {
+      "types": "./dist/constants/*.d.ts",
+      "import": "./dist/constants/*.js",
+      "require": "./dist/constants/*.js"
+    },
+    "./role": {
+      "types": "./dist/role/index.d.ts",
+      "import": "./dist/role/index.js",
+      "require": "./dist/role/index.js"
+    },
+    "./role/*": {
+      "types": "./dist/role/*.d.ts",
+      "import": "./dist/role/*.js",
+      "require": "./dist/role/*.js"
+    },
+    "./signup": {
+      "types": "./dist/signup/index.d.ts",
+      "import": "./dist/signup/index.js",
+      "require": "./dist/signup/index.js"
+    },
+    "./signup/*": {
+      "types": "./dist/signup/*.d.ts",
+      "import": "./dist/signup/*.js",
+      "require": "./dist/signup/*.js"
+    },
+    "./user": {
+      "types": "./dist/user/index.d.ts",
+      "import": "./dist/user/index.js",
+      "require": "./dist/user/index.js"
+    },
+    "./user/*": {
+      "types": "./dist/user/*.d.ts",
+      "import": "./dist/user/*.js",
+      "require": "./dist/user/*.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js"
+    },
+    "./utils/*": {
+      "types": "./dist/utils/*.d.ts",
+      "import": "./dist/utils/*.js",
+      "require": "./dist/utils/*.js"
+    }
+  }
+}
