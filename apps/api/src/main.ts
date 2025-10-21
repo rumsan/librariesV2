@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { AllExceptionsFilter } from './all-exceptions.filter';
-import { PrismaClientExceptionFilter } from '@lib/database';
+import { PrismaClientExceptionFilter } from '@rumsan/prisma';
 import { WinstonModule } from 'nest-winston';
 import { loggerInstance } from './helpers/wiston.logger';
 

@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PrismaModule } from '@lib/database';
+import { PrismaModule } from '@rumsan/prisma';
 import { ConfigModule } from '@nestjs/config';
+import { SettingsModule } from './settings/settings.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { ConfigModule } from '@nestjs/config';
     PrismaModule.forRootWithConfig({
       isGlobal: true,
     }),
+    SettingsModule
   ],
   controllers: [AppController],
   providers: [AppService],

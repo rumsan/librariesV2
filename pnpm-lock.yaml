@@ -30,9 +30,6 @@ importers:
 
   apps/api:
     dependencies:
-      '@lib/database':
-        specifier: workspace:*
-        version: link:../../packages/database
       '@nestjs/common':
         specifier: ^11.0.1
         version: 11.1.6(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -51,6 +48,9 @@ importers:
       '@nestjs/swagger':
         specifier: ^11.2.0
         version: 11.2.0(@nestjs/common@11.1.6)(@nestjs/core@11.1.6)(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)
+      '@rumsan/prisma':
+        specifier: workspace:*
+        version: link:../../packages/rumsan-prisma
       class-transformer:
         specifier: ^0.5.1
         version: 0.5.1
@@ -152,7 +152,46 @@ importers:
         specifier: ^8.20.0
         version: 8.46.0(eslint@9.37.0)(typescript@5.9.2)
 
-  packages/database:
+  packages/eslint-config:
+    devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^15.1.0
+        version: 15.5.4
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.15.0
+        version: 8.46.0(@typescript-eslint/parser@8.46.0)(eslint@9.37.0)(typescript@5.9.2)
+      '@typescript-eslint/parser':
+        specifier: ^8.15.0
+        version: 8.46.0(eslint@9.37.0)(typescript@5.9.2)
+      eslint:
+        specifier: ^9.15.0
+        version: 9.37.0
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.2(eslint@9.37.0)
+      eslint-plugin-only-warn:
+        specifier: ^1.1.0
+        version: 1.1.0
+      eslint-plugin-react:
+        specifier: ^7.37.2
+        version: 7.37.5(eslint@9.37.0)
+      eslint-plugin-react-hooks:
+        specifier: ^5.0.0
+        version: 5.2.0(eslint@9.37.0)
+      eslint-plugin-turbo:
+        specifier: ^2.3.0
+        version: 2.5.8(eslint@9.37.0)(turbo@2.5.8)
+      globals:
+        specifier: ^15.12.0
+        version: 15.15.0
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.2
+      typescript-eslint:
+        specifier: ^8.15.0
+        version: 8.46.0(eslint@9.37.0)(typescript@5.9.2)
+
+  packages/rumsan-prisma:
     dependencies:
       '@nestjs/common':
         specifier: ^11.0.1
@@ -197,45 +236,6 @@ importers:
       tsup:
         specifier: ^8.5.0
         version: 8.5.0(typescript@5.9.2)
-
-  packages/eslint-config:
-    devDependencies:
-      '@next/eslint-plugin-next':
-        specifier: ^15.1.0
-        version: 15.5.4
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.15.0
-        version: 8.46.0(@typescript-eslint/parser@8.46.0)(eslint@9.37.0)(typescript@5.9.2)
-      '@typescript-eslint/parser':
-        specifier: ^8.15.0
-        version: 8.46.0(eslint@9.37.0)(typescript@5.9.2)
-      eslint:
-        specifier: ^9.15.0
-        version: 9.37.0
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.2(eslint@9.37.0)
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      eslint-plugin-react:
-        specifier: ^7.37.2
-        version: 7.37.5(eslint@9.37.0)
-      eslint-plugin-react-hooks:
-        specifier: ^5.0.0
-        version: 5.2.0(eslint@9.37.0)
-      eslint-plugin-turbo:
-        specifier: ^2.3.0
-        version: 2.5.8(eslint@9.37.0)(turbo@2.5.8)
-      globals:
-        specifier: ^15.12.0
-        version: 15.15.0
-      typescript:
-        specifier: ^5.3.3
-        version: 5.9.2
-      typescript-eslint:
-        specifier: ^8.15.0
-        version: 8.46.0(eslint@9.37.0)(typescript@5.9.2)
 
   packages/typescript-config: {}
 

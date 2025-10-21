@@ -9,7 +9,7 @@ The API application is built with NestJS and provides a robust API layer for han
 ## Features
 
 - **RESTful API**: Well-structured REST endpoints for trigger operations
-- **Database Integration**: Uses the shared `@lib/database` package for data operations
+- **Database Integration**: Uses the shared `@rumsan/prisma` package for data operations
 - **Exception Handling**: Global exception filters for database and application errors
 - **API Documentation**: Auto-generated Swagger documentation
 - **Logging**: Structured logging with Winston integration
@@ -108,7 +108,7 @@ The Swagger UI provides detailed information about all available endpoints, requ
 
 ## Database Integration
 
-The application uses the shared `@lib/database` package which provides:
+The application uses the shared `@rumsan/prisma` package which provides:
 
 - **Prisma ORM Integration**: Type-safe database operations
 - **Connection Management**: Automatic database connection handling
@@ -139,8 +139,8 @@ The application uses Winston for structured logging with different log levels:
 1. **Start the database**: Ensure PostgreSQL is running
 2. **Set up environment**: Configure your `.env` file
 3. **Install dependencies**: Run `pnpm install` from the root
-4. **Generate Prisma client**: Run `pnpm --filter @lib/database db:generate`
-5. **Run migrations**: Run `pnpm --filter @lib/database db:migrate`
+4. **Generate Prisma client**: Run `pnpm --filter @rumsan/prisma db:generate`
+5. **Run migrations**: Run `pnpm --filter @rumsan/prisma db:migrate`
 6. **Start development server**: Run `pnpm dev`
 
 ## Configuration
