@@ -37,7 +37,7 @@ src/
 This package is part of the monorepo and is automatically available to other packages. To use it in your NestJS application:
 
 ```typescript
-import { PrismaModule, PrismaService } from '@lib/database';
+import { PrismaModule, PrismaService } from '@rumsan/prisma';
 ```
 
 ## Usage
@@ -50,7 +50,7 @@ The simplest way to use the database package in your NestJS application:
 // app.module.ts
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { PrismaModule } from '@lib/database';
+import { PrismaModule } from '@rumsan/prisma';
 
 @Module({
   imports: [
@@ -72,7 +72,7 @@ Inject the PrismaService into your services:
 ```typescript
 // your.service.ts
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '@lib/database';
+import { PrismaService } from '@rumsan/prisma';
 
 @Injectable()
 export class YourService {
@@ -94,7 +94,7 @@ For more control over the Prisma configuration:
 
 ```typescript
 // app.module.ts
-import { PrismaModule } from '@lib/database';
+import { PrismaModule } from '@rumsan/prisma';
 
 @Module({
   imports: [
@@ -175,7 +175,7 @@ The exception filter can be registered globally in your application:
 
 ```typescript
 // main.ts
-import { PrismaClientExceptionFilter } from '@lib/database';
+import { PrismaClientExceptionFilter } from '@rumsan/prisma';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

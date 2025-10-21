@@ -12,7 +12,7 @@ This monorepo contains the following applications and packages:
 
 ### Packages
 
-- **@lib/database** - Shared database package with Prisma integration and NestJS modules
+- **@rumsan/prisma** - Shared database package with Prisma integration and NestJS modules
 - **@workspace/eslint-config** - Shared ESLint configurations
 - **@workspace/typescript-config** - Shared TypeScript configurations
 
@@ -49,10 +49,10 @@ Before running this project, make sure you have the following installed:
 4. **Set up the database**
    ```bash
    # Generate Prisma client
-   pnpm --filter @lib/database db:generate
+   pnpm --filter @rumsan/prisma db:generate
    
    # Run database migrations
-   pnpm --filter @lib/database db:migrate
+   pnpm --filter @rumsan/prisma db:migrate
    ```
 
 5. **Build all packages**
@@ -76,7 +76,7 @@ The triggers application will be available at `http://localhost:8000/v1` with Sw
 pnpm build
 
 # Build specific package
-pnpm --filter @lib/database build
+pnpm --filter @rumsan/prisma build
 pnpm --filter triggers build
 ```
 
@@ -94,13 +94,13 @@ pnpm --filter api dev
 
 ```bash
 # Generate Prisma client
-pnpm --filter @lib/database db:generate
+pnpm --filter @rumsan/prisma db:generate
 
 # Run migrations
-pnpm --filter @lib/database db:migrate
+pnpm --filter @rumsan/prisma db:migrate
 
 # Deploy migrations (production)
-pnpm --filter @lib/database db:deploy
+pnpm --filter @rumsan/prisma db:deploy
 ```
 
 ### Testing
@@ -135,8 +135,8 @@ The project follows a modular architecture with shared packages:
 
 The packages have the following dependency relationships:
 
-- `api` app depends on `@lib/database`
-- `@lib/database` is a standalone package that can be used by multiple applications
+- `api` app depends on `@rumsan/prisma`
+- `@rumsan/prisma` is a standalone package that can be used by multiple applications
 - Configuration packages are shared across all applications
 
 ## Troubleshooting
