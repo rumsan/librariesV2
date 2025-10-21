@@ -12,8 +12,9 @@
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'dist' -exec rm -rf '{}' + && find . -name '.next' -exec rm -rf '{}' + && find . -name '.turbo' -exec rm -rf '{}' +"
   },
   "devDependencies": {
-    "@workspace/typescript-config": "workspace:*",
+    "@changesets/cli": "^2.29.7",
     "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",
     "typescript": "5.9.2"
